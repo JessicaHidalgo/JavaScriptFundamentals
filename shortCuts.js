@@ -33,3 +33,31 @@ function outerFunction() {
   innerFunction();
 };
 outerFunction();
+
+//Events
+window.addEventListener('load', (event) => {
+    alert("Hello World")
+  });
+
+  window.onload = (event) => {
+    console.log('page is fully loaded');
+  };
+
+  function changeColor(newColor) {
+    var elem = document.getElementById('para');
+    elem.style.color = newColor;
+  }
+
+  <p>Bring your mouse inside the division to see the result:</p>
+    <div onmouseover="over()" onmouseout="out()">
+        <h2> This is inside the division </h2>
+    </div>
+
+    <p>Click the following button and see result</p>      
+    <form>
+       <input type = "button" onclick = "sayHello()" value = "Say Hello" />
+    </form>
+
+    <p id="para">Some text here</p>
+  <button onclick="changeColor('blue');">blue</button>
+  <button onclick="changeColor('red');">red</button>
